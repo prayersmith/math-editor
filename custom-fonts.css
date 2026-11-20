@@ -1,0 +1,354 @@
+﻿@font-face { font-family: 'خط 1'; src: url('fonts/font_0001.ttf'); font-display: swap; }
+@font-face { font-family: 'font_0001'; src: url('fonts/font_0001.ttf'); font-display: swap; }
+@font-face { font-family: 'خط 2'; src: url('fonts/font_0002.ttf'); font-display: swap; }
+@font-face { font-family: 'font_0002'; src: url('fonts/font_0002.ttf'); font-display: swap; }
+@font-face { font-family: 'خط 3'; src: url('fonts/font_0003.ttf'); font-display: swap; }
+@font-face { font-family: 'font_0003'; src: url('fonts/font_0003.ttf'); font-display: swap; }
+@font-face { font-family: 'خط 4'; src: url('fonts/font_0004.ttf'); font-display: swap; }
+@font-face { font-family: 'font_0004'; src: url('fonts/font_0004.ttf'); font-display: swap; }
+@font-face { font-family: 'خط 5'; src: url('fonts/font_0005.ttf'); font-display: swap; }
+@font-face { font-family: 'font_0005'; src: url('fonts/font_0005.ttf'); font-display: swap; }
+@font-face { font-family: 'خط 6'; src: url('fonts/font_0006.ttf'); font-display: swap; }
+@font-face { font-family: 'font_0006'; src: url('fonts/font_0006.ttf'); font-display: swap; }
+@font-face { font-family: 'خط 7'; src: url('fonts/font_0007.ttf'); font-display: swap; }
+@font-face { font-family: 'font_0007'; src: url('fonts/font_0007.ttf'); font-display: swap; }
+@font-face { font-family: 'خط 8'; src: url('fonts/font_0008.ttf'); font-display: swap; }
+@font-face { font-family: 'font_0008'; src: url('fonts/font_0008.ttf'); font-display: swap; }
+@font-face { font-family: 'خط 9'; src: url('fonts/font_0009.ttf'); font-display: swap; }
+@font-face { font-family: 'font_0009'; src: url('fonts/font_0009.ttf'); font-display: swap; }
+@font-face { font-family: 'خط 10'; src: url('fonts/font_0010.ttf'); font-display: swap; }
+@font-face { font-family: 'font_0010'; src: url('fonts/font_0010.ttf'); font-display: swap; }
+@font-face { font-family: 'خط 11'; src: url('fonts/font_0011.ttf'); font-display: swap; }
+@font-face { font-family: 'font_0011'; src: url('fonts/font_0011.ttf'); font-display: swap; }
+@font-face { font-family: 'خط 12'; src: url('fonts/font_0012.ttf'); font-display: swap; }
+@font-face { font-family: 'font_0012'; src: url('fonts/font_0012.ttf'); font-display: swap; }
+@font-face { font-family: 'خط 13'; src: url('fonts/font_0013.ttf'); font-display: swap; }
+@font-face { font-family: 'font_0013'; src: url('fonts/font_0013.ttf'); font-display: swap; }
+@font-face { font-family: 'خط 14'; src: url('fonts/font_0014.ttf'); font-display: swap; }
+@font-face { font-family: 'font_0014'; src: url('fonts/font_0014.ttf'); font-display: swap; }
+@font-face { font-family: 'خط 15'; src: url('fonts/font_0015.ttf'); font-display: swap; }
+@font-face { font-family: 'font_0015'; src: url('fonts/font_0015.ttf'); font-display: swap; }
+@font-face { font-family: 'خط 16'; src: url('fonts/font_0016.ttf'); font-display: swap; }
+@font-face { font-family: 'font_0016'; src: url('fonts/font_0016.ttf'); font-display: swap; }
+@font-face { font-family: 'خط 17'; src: url('fonts/font_0017.ttf'); font-display: swap; }
+@font-face { font-family: 'font_0017'; src: url('fonts/font_0017.ttf'); font-display: swap; }
+@font-face { font-family: 'خط 18'; src: url('fonts/font_0018.ttf'); font-display: swap; }
+@font-face { font-family: 'font_0018'; src: url('fonts/font_0018.ttf'); font-display: swap; }
+@font-face { font-family: 'خط 19'; src: url('fonts/font_0019.ttf'); font-display: swap; }
+@font-face { font-family: 'font_0019'; src: url('fonts/font_0019.ttf'); font-display: swap; }
+@font-face { font-family: 'خط 20'; src: url('fonts/font_0020.otf'); font-display: swap; }
+@font-face { font-family: 'font_0020'; src: url('fonts/font_0020.otf'); font-display: swap; }
+@font-face { font-family: 'خط 21'; src: url('fonts/font_0021.ttf'); font-display: swap; }
+@font-face { font-family: 'font_0021'; src: url('fonts/font_0021.ttf'); font-display: swap; }
+@font-face { font-family: 'خط 22'; src: url('fonts/font_0022.ttf'); font-display: swap; }
+@font-face { font-family: 'font_0022'; src: url('fonts/font_0022.ttf'); font-display: swap; }
+@font-face { font-family: 'خط 23'; src: url('fonts/font_0023.ttf'); font-display: swap; }
+@font-face { font-family: 'font_0023'; src: url('fonts/font_0023.ttf'); font-display: swap; }
+@font-face { font-family: 'خط 24'; src: url('fonts/font_0024.ttf'); font-display: swap; }
+@font-face { font-family: 'font_0024'; src: url('fonts/font_0024.ttf'); font-display: swap; }
+@font-face { font-family: 'خط 25'; src: url('fonts/font_0025.ttf'); font-display: swap; }
+@font-face { font-family: 'font_0025'; src: url('fonts/font_0025.ttf'); font-display: swap; }
+@font-face { font-family: 'خط 26'; src: url('fonts/font_0026.ttf'); font-display: swap; }
+@font-face { font-family: 'font_0026'; src: url('fonts/font_0026.ttf'); font-display: swap; }
+@font-face { font-family: 'خط 27'; src: url('fonts/font_0027.ttf'); font-display: swap; }
+@font-face { font-family: 'font_0027'; src: url('fonts/font_0027.ttf'); font-display: swap; }
+@font-face { font-family: 'خط 28'; src: url('fonts/font_0028.ttf'); font-display: swap; }
+@font-face { font-family: 'font_0028'; src: url('fonts/font_0028.ttf'); font-display: swap; }
+@font-face { font-family: 'خط 29'; src: url('fonts/font_0029.ttf'); font-display: swap; }
+@font-face { font-family: 'font_0029'; src: url('fonts/font_0029.ttf'); font-display: swap; }
+@font-face { font-family: 'خط 30'; src: url('fonts/font_0030.ttf'); font-display: swap; }
+@font-face { font-family: 'font_0030'; src: url('fonts/font_0030.ttf'); font-display: swap; }
+@font-face { font-family: 'خط 31'; src: url('fonts/font_0031.ttf'); font-display: swap; }
+@font-face { font-family: 'font_0031'; src: url('fonts/font_0031.ttf'); font-display: swap; }
+@font-face { font-family: 'خط 32'; src: url('fonts/font_0032.ttf'); font-display: swap; }
+@font-face { font-family: 'font_0032'; src: url('fonts/font_0032.ttf'); font-display: swap; }
+@font-face { font-family: 'خط 33'; src: url('fonts/font_0033.ttf'); font-display: swap; }
+@font-face { font-family: 'font_0033'; src: url('fonts/font_0033.ttf'); font-display: swap; }
+@font-face { font-family: 'خط 34'; src: url('fonts/font_0034.ttf'); font-display: swap; }
+@font-face { font-family: 'font_0034'; src: url('fonts/font_0034.ttf'); font-display: swap; }
+@font-face { font-family: 'خط 35'; src: url('fonts/font_0035.ttf'); font-display: swap; }
+@font-face { font-family: 'font_0035'; src: url('fonts/font_0035.ttf'); font-display: swap; }
+@font-face { font-family: 'خط 36'; src: url('fonts/font_0036.ttf'); font-display: swap; }
+@font-face { font-family: 'font_0036'; src: url('fonts/font_0036.ttf'); font-display: swap; }
+@font-face { font-family: 'خط 37'; src: url('fonts/font_0037.ttf'); font-display: swap; }
+@font-face { font-family: 'font_0037'; src: url('fonts/font_0037.ttf'); font-display: swap; }
+@font-face { font-family: 'خط 38'; src: url('fonts/font_0038.ttf'); font-display: swap; }
+@font-face { font-family: 'font_0038'; src: url('fonts/font_0038.ttf'); font-display: swap; }
+@font-face { font-family: 'خط 39'; src: url('fonts/font_0039.ttf'); font-display: swap; }
+@font-face { font-family: 'font_0039'; src: url('fonts/font_0039.ttf'); font-display: swap; }
+@font-face { font-family: 'خط 40'; src: url('fonts/font_0040.ttf'); font-display: swap; }
+@font-face { font-family: 'font_0040'; src: url('fonts/font_0040.ttf'); font-display: swap; }
+@font-face { font-family: 'خط 41'; src: url('fonts/font_0041.ttf'); font-display: swap; }
+@font-face { font-family: 'font_0041'; src: url('fonts/font_0041.ttf'); font-display: swap; }
+@font-face { font-family: 'خط 42'; src: url('fonts/font_0042.ttf'); font-display: swap; }
+@font-face { font-family: 'font_0042'; src: url('fonts/font_0042.ttf'); font-display: swap; }
+@font-face { font-family: 'خط 43'; src: url('fonts/font_0043.ttf'); font-display: swap; }
+@font-face { font-family: 'font_0043'; src: url('fonts/font_0043.ttf'); font-display: swap; }
+@font-face { font-family: 'خط 44'; src: url('fonts/font_0044.ttf'); font-display: swap; }
+@font-face { font-family: 'font_0044'; src: url('fonts/font_0044.ttf'); font-display: swap; }
+@font-face { font-family: 'خط 45'; src: url('fonts/font_0045.ttf'); font-display: swap; }
+@font-face { font-family: 'font_0045'; src: url('fonts/font_0045.ttf'); font-display: swap; }
+@font-face { font-family: 'خط 46'; src: url('fonts/font_0046.ttf'); font-display: swap; }
+@font-face { font-family: 'font_0046'; src: url('fonts/font_0046.ttf'); font-display: swap; }
+@font-face { font-family: 'خط 47'; src: url('fonts/font_0047.ttf'); font-display: swap; }
+@font-face { font-family: 'font_0047'; src: url('fonts/font_0047.ttf'); font-display: swap; }
+@font-face { font-family: 'خط 48'; src: url('fonts/font_0048.ttf'); font-display: swap; }
+@font-face { font-family: 'font_0048'; src: url('fonts/font_0048.ttf'); font-display: swap; }
+@font-face { font-family: 'خط 49'; src: url('fonts/font_0049.ttf'); font-display: swap; }
+@font-face { font-family: 'font_0049'; src: url('fonts/font_0049.ttf'); font-display: swap; }
+@font-face { font-family: 'خط 50'; src: url('fonts/font_0050.ttf'); font-display: swap; }
+@font-face { font-family: 'font_0050'; src: url('fonts/font_0050.ttf'); font-display: swap; }
+@font-face { font-family: 'خط 51'; src: url('fonts/font_0051.ttf'); font-display: swap; }
+@font-face { font-family: 'font_0051'; src: url('fonts/font_0051.ttf'); font-display: swap; }
+@font-face { font-family: 'خط 52'; src: url('fonts/font_0052.ttf'); font-display: swap; }
+@font-face { font-family: 'font_0052'; src: url('fonts/font_0052.ttf'); font-display: swap; }
+@font-face { font-family: 'خط 53'; src: url('fonts/font_0053.ttf'); font-display: swap; }
+@font-face { font-family: 'font_0053'; src: url('fonts/font_0053.ttf'); font-display: swap; }
+@font-face { font-family: 'خط 54'; src: url('fonts/font_0054.ttf'); font-display: swap; }
+@font-face { font-family: 'font_0054'; src: url('fonts/font_0054.ttf'); font-display: swap; }
+@font-face { font-family: 'خط 55'; src: url('fonts/font_0055.ttf'); font-display: swap; }
+@font-face { font-family: 'font_0055'; src: url('fonts/font_0055.ttf'); font-display: swap; }
+@font-face { font-family: 'خط 56'; src: url('fonts/font_0056.ttf'); font-display: swap; }
+@font-face { font-family: 'font_0056'; src: url('fonts/font_0056.ttf'); font-display: swap; }
+@font-face { font-family: 'خط 57'; src: url('fonts/font_0057.ttf'); font-display: swap; }
+@font-face { font-family: 'font_0057'; src: url('fonts/font_0057.ttf'); font-display: swap; }
+@font-face { font-family: 'خط 58'; src: url('fonts/font_0058.ttf'); font-display: swap; }
+@font-face { font-family: 'font_0058'; src: url('fonts/font_0058.ttf'); font-display: swap; }
+@font-face { font-family: 'خط 59'; src: url('fonts/font_0059.ttf'); font-display: swap; }
+@font-face { font-family: 'font_0059'; src: url('fonts/font_0059.ttf'); font-display: swap; }
+@font-face { font-family: 'خط 60'; src: url('fonts/font_0060.ttf'); font-display: swap; }
+@font-face { font-family: 'font_0060'; src: url('fonts/font_0060.ttf'); font-display: swap; }
+@font-face { font-family: 'خط 61'; src: url('fonts/font_0061.ttf'); font-display: swap; }
+@font-face { font-family: 'font_0061'; src: url('fonts/font_0061.ttf'); font-display: swap; }
+@font-face { font-family: 'خط 62'; src: url('fonts/font_0062.ttf'); font-display: swap; }
+@font-face { font-family: 'font_0062'; src: url('fonts/font_0062.ttf'); font-display: swap; }
+@font-face { font-family: 'خط 63'; src: url('fonts/font_0063.ttf'); font-display: swap; }
+@font-face { font-family: 'font_0063'; src: url('fonts/font_0063.ttf'); font-display: swap; }
+@font-face { font-family: 'خط 64'; src: url('fonts/font_0064.ttf'); font-display: swap; }
+@font-face { font-family: 'font_0064'; src: url('fonts/font_0064.ttf'); font-display: swap; }
+@font-face { font-family: 'خط 65'; src: url('fonts/font_0065.ttf'); font-display: swap; }
+@font-face { font-family: 'font_0065'; src: url('fonts/font_0065.ttf'); font-display: swap; }
+@font-face { font-family: 'خط 66'; src: url('fonts/font_0066.ttf'); font-display: swap; }
+@font-face { font-family: 'font_0066'; src: url('fonts/font_0066.ttf'); font-display: swap; }
+@font-face { font-family: 'خط 67'; src: url('fonts/font_0067.ttf'); font-display: swap; }
+@font-face { font-family: 'font_0067'; src: url('fonts/font_0067.ttf'); font-display: swap; }
+@font-face { font-family: 'خط 68'; src: url('fonts/font_0068.ttf'); font-display: swap; }
+@font-face { font-family: 'font_0068'; src: url('fonts/font_0068.ttf'); font-display: swap; }
+@font-face { font-family: 'خط 69'; src: url('fonts/font_0069.ttf'); font-display: swap; }
+@font-face { font-family: 'font_0069'; src: url('fonts/font_0069.ttf'); font-display: swap; }
+@font-face { font-family: 'خط 70'; src: url('fonts/font_0070.ttf'); font-display: swap; }
+@font-face { font-family: 'font_0070'; src: url('fonts/font_0070.ttf'); font-display: swap; }
+@font-face { font-family: 'خط 71'; src: url('fonts/font_0071.ttf'); font-display: swap; }
+@font-face { font-family: 'font_0071'; src: url('fonts/font_0071.ttf'); font-display: swap; }
+@font-face { font-family: 'خط 72'; src: url('fonts/font_0072.ttf'); font-display: swap; }
+@font-face { font-family: 'font_0072'; src: url('fonts/font_0072.ttf'); font-display: swap; }
+@font-face { font-family: 'خط 73'; src: url('fonts/font_0073.ttf'); font-display: swap; }
+@font-face { font-family: 'font_0073'; src: url('fonts/font_0073.ttf'); font-display: swap; }
+@font-face { font-family: 'خط 74'; src: url('fonts/font_0074.ttf'); font-display: swap; }
+@font-face { font-family: 'font_0074'; src: url('fonts/font_0074.ttf'); font-display: swap; }
+@font-face { font-family: 'خط 75'; src: url('fonts/font_0075.ttf'); font-display: swap; }
+@font-face { font-family: 'font_0075'; src: url('fonts/font_0075.ttf'); font-display: swap; }
+@font-face { font-family: 'خط 76'; src: url('fonts/font_0076.ttf'); font-display: swap; }
+@font-face { font-family: 'font_0076'; src: url('fonts/font_0076.ttf'); font-display: swap; }
+@font-face { font-family: 'خط 77'; src: url('fonts/font_0077.ttf'); font-display: swap; }
+@font-face { font-family: 'font_0077'; src: url('fonts/font_0077.ttf'); font-display: swap; }
+@font-face { font-family: 'خط 78'; src: url('fonts/font_0078.ttf'); font-display: swap; }
+@font-face { font-family: 'font_0078'; src: url('fonts/font_0078.ttf'); font-display: swap; }
+@font-face { font-family: 'خط 79'; src: url('fonts/font_0079.ttf'); font-display: swap; }
+@font-face { font-family: 'font_0079'; src: url('fonts/font_0079.ttf'); font-display: swap; }
+@font-face { font-family: 'خط 80'; src: url('fonts/font_0080.ttf'); font-display: swap; }
+@font-face { font-family: 'font_0080'; src: url('fonts/font_0080.ttf'); font-display: swap; }
+@font-face { font-family: 'خط 81'; src: url('fonts/font_0081.ttf'); font-display: swap; }
+@font-face { font-family: 'font_0081'; src: url('fonts/font_0081.ttf'); font-display: swap; }
+@font-face { font-family: 'خط 82'; src: url('fonts/font_0082.ttf'); font-display: swap; }
+@font-face { font-family: 'font_0082'; src: url('fonts/font_0082.ttf'); font-display: swap; }
+@font-face { font-family: 'خط 83'; src: url('fonts/font_0083.ttf'); font-display: swap; }
+@font-face { font-family: 'font_0083'; src: url('fonts/font_0083.ttf'); font-display: swap; }
+@font-face { font-family: 'خط 84'; src: url('fonts/font_0084.ttf'); font-display: swap; }
+@font-face { font-family: 'font_0084'; src: url('fonts/font_0084.ttf'); font-display: swap; }
+@font-face { font-family: 'خط 85'; src: url('fonts/font_0085.ttf'); font-display: swap; }
+@font-face { font-family: 'font_0085'; src: url('fonts/font_0085.ttf'); font-display: swap; }
+@font-face { font-family: 'خط 86'; src: url('fonts/font_0086.ttf'); font-display: swap; }
+@font-face { font-family: 'font_0086'; src: url('fonts/font_0086.ttf'); font-display: swap; }
+@font-face { font-family: 'خط 87'; src: url('fonts/font_0087.ttf'); font-display: swap; }
+@font-face { font-family: 'font_0087'; src: url('fonts/font_0087.ttf'); font-display: swap; }
+@font-face { font-family: 'خط 88'; src: url('fonts/font_0088.ttf'); font-display: swap; }
+@font-face { font-family: 'font_0088'; src: url('fonts/font_0088.ttf'); font-display: swap; }
+@font-face { font-family: 'خط 89'; src: url('fonts/font_0089.ttf'); font-display: swap; }
+@font-face { font-family: 'font_0089'; src: url('fonts/font_0089.ttf'); font-display: swap; }
+@font-face { font-family: 'خط 90'; src: url('fonts/font_0090.ttf'); font-display: swap; }
+@font-face { font-family: 'font_0090'; src: url('fonts/font_0090.ttf'); font-display: swap; }
+@font-face { font-family: 'خط 91'; src: url('fonts/font_0091.ttf'); font-display: swap; }
+@font-face { font-family: 'font_0091'; src: url('fonts/font_0091.ttf'); font-display: swap; }
+@font-face { font-family: 'خط 92'; src: url('fonts/font_0092.ttf'); font-display: swap; }
+@font-face { font-family: 'font_0092'; src: url('fonts/font_0092.ttf'); font-display: swap; }
+@font-face { font-family: 'خط 93'; src: url('fonts/font_0093.ttf'); font-display: swap; }
+@font-face { font-family: 'font_0093'; src: url('fonts/font_0093.ttf'); font-display: swap; }
+@font-face { font-family: 'خط 94'; src: url('fonts/font_0094.ttf'); font-display: swap; }
+@font-face { font-family: 'font_0094'; src: url('fonts/font_0094.ttf'); font-display: swap; }
+@font-face { font-family: 'خط 95'; src: url('fonts/font_0095.ttf'); font-display: swap; }
+@font-face { font-family: 'font_0095'; src: url('fonts/font_0095.ttf'); font-display: swap; }
+@font-face { font-family: 'خط 96'; src: url('fonts/font_0096.ttf'); font-display: swap; }
+@font-face { font-family: 'font_0096'; src: url('fonts/font_0096.ttf'); font-display: swap; }
+@font-face { font-family: 'خط 97'; src: url('fonts/font_0097.ttf'); font-display: swap; }
+@font-face { font-family: 'font_0097'; src: url('fonts/font_0097.ttf'); font-display: swap; }
+@font-face { font-family: 'خط 98'; src: url('fonts/font_0098.ttf'); font-display: swap; }
+@font-face { font-family: 'font_0098'; src: url('fonts/font_0098.ttf'); font-display: swap; }
+@font-face { font-family: 'خط 99'; src: url('fonts/font_0099.ttf'); font-display: swap; }
+@font-face { font-family: 'font_0099'; src: url('fonts/font_0099.ttf'); font-display: swap; }
+@font-face { font-family: 'خط 100'; src: url('fonts/font_0100.ttf'); font-display: swap; }
+@font-face { font-family: 'font_0100'; src: url('fonts/font_0100.ttf'); font-display: swap; }
+@font-face { font-family: 'خط 101'; src: url('fonts/font_0101.ttf'); font-display: swap; }
+@font-face { font-family: 'font_0101'; src: url('fonts/font_0101.ttf'); font-display: swap; }
+@font-face { font-family: 'خط 102'; src: url('fonts/font_0102.ttf'); font-display: swap; }
+@font-face { font-family: 'font_0102'; src: url('fonts/font_0102.ttf'); font-display: swap; }
+@font-face { font-family: 'خط 103'; src: url('fonts/font_0103.ttf'); font-display: swap; }
+@font-face { font-family: 'font_0103'; src: url('fonts/font_0103.ttf'); font-display: swap; }
+@font-face { font-family: 'خط 104'; src: url('fonts/font_0104.ttf'); font-display: swap; }
+@font-face { font-family: 'font_0104'; src: url('fonts/font_0104.ttf'); font-display: swap; }
+@font-face { font-family: 'خط 105'; src: url('fonts/font_0105.ttf'); font-display: swap; }
+@font-face { font-family: 'font_0105'; src: url('fonts/font_0105.ttf'); font-display: swap; }
+@font-face { font-family: 'خط 106'; src: url('fonts/font_0106.ttf'); font-display: swap; }
+@font-face { font-family: 'font_0106'; src: url('fonts/font_0106.ttf'); font-display: swap; }
+@font-face { font-family: 'خط 107'; src: url('fonts/font_0107.ttf'); font-display: swap; }
+@font-face { font-family: 'font_0107'; src: url('fonts/font_0107.ttf'); font-display: swap; }
+@font-face { font-family: 'خط 108'; src: url('fonts/font_0108.ttf'); font-display: swap; }
+@font-face { font-family: 'font_0108'; src: url('fonts/font_0108.ttf'); font-display: swap; }
+@font-face { font-family: 'خط 109'; src: url('fonts/font_0109.ttf'); font-display: swap; }
+@font-face { font-family: 'font_0109'; src: url('fonts/font_0109.ttf'); font-display: swap; }
+@font-face { font-family: 'خط 110'; src: url('fonts/font_0110.ttf'); font-display: swap; }
+@font-face { font-family: 'font_0110'; src: url('fonts/font_0110.ttf'); font-display: swap; }
+@font-face { font-family: 'خط 111'; src: url('fonts/font_0111.ttf'); font-display: swap; }
+@font-face { font-family: 'font_0111'; src: url('fonts/font_0111.ttf'); font-display: swap; }
+@font-face { font-family: 'خط 112'; src: url('fonts/font_0112.ttf'); font-display: swap; }
+@font-face { font-family: 'font_0112'; src: url('fonts/font_0112.ttf'); font-display: swap; }
+@font-face { font-family: 'خط 113'; src: url('fonts/font_0113.ttf'); font-display: swap; }
+@font-face { font-family: 'font_0113'; src: url('fonts/font_0113.ttf'); font-display: swap; }
+@font-face { font-family: 'خط 114'; src: url('fonts/font_0114.ttf'); font-display: swap; }
+@font-face { font-family: 'font_0114'; src: url('fonts/font_0114.ttf'); font-display: swap; }
+@font-face { font-family: 'خط 115'; src: url('fonts/font_0115.ttf'); font-display: swap; }
+@font-face { font-family: 'font_0115'; src: url('fonts/font_0115.ttf'); font-display: swap; }
+@font-face { font-family: 'خط 116'; src: url('fonts/font_0116.ttf'); font-display: swap; }
+@font-face { font-family: 'font_0116'; src: url('fonts/font_0116.ttf'); font-display: swap; }
+@font-face { font-family: 'خط 117'; src: url('fonts/font_0117.ttf'); font-display: swap; }
+@font-face { font-family: 'font_0117'; src: url('fonts/font_0117.ttf'); font-display: swap; }
+@font-face { font-family: 'خط 118'; src: url('fonts/font_0118.ttf'); font-display: swap; }
+@font-face { font-family: 'font_0118'; src: url('fonts/font_0118.ttf'); font-display: swap; }
+@font-face { font-family: 'خط 119'; src: url('fonts/font_0119.ttf'); font-display: swap; }
+@font-face { font-family: 'font_0119'; src: url('fonts/font_0119.ttf'); font-display: swap; }
+@font-face { font-family: 'خط 120'; src: url('fonts/font_0120.ttf'); font-display: swap; }
+@font-face { font-family: 'font_0120'; src: url('fonts/font_0120.ttf'); font-display: swap; }
+@font-face { font-family: 'خط 121'; src: url('fonts/font_0121.ttf'); font-display: swap; }
+@font-face { font-family: 'font_0121'; src: url('fonts/font_0121.ttf'); font-display: swap; }
+@font-face { font-family: 'خط 122'; src: url('fonts/font_0122.ttf'); font-display: swap; }
+@font-face { font-family: 'font_0122'; src: url('fonts/font_0122.ttf'); font-display: swap; }
+@font-face { font-family: 'خط 123'; src: url('fonts/font_0123.ttf'); font-display: swap; }
+@font-face { font-family: 'font_0123'; src: url('fonts/font_0123.ttf'); font-display: swap; }
+@font-face { font-family: 'خط 124'; src: url('fonts/font_0124.ttf'); font-display: swap; }
+@font-face { font-family: 'font_0124'; src: url('fonts/font_0124.ttf'); font-display: swap; }
+@font-face { font-family: 'خط 125'; src: url('fonts/font_0125.ttf'); font-display: swap; }
+@font-face { font-family: 'font_0125'; src: url('fonts/font_0125.ttf'); font-display: swap; }
+@font-face { font-family: 'خط 126'; src: url('fonts/font_0126.ttf'); font-display: swap; }
+@font-face { font-family: 'font_0126'; src: url('fonts/font_0126.ttf'); font-display: swap; }
+@font-face { font-family: 'خط 127'; src: url('fonts/font_0127.ttf'); font-display: swap; }
+@font-face { font-family: 'font_0127'; src: url('fonts/font_0127.ttf'); font-display: swap; }
+@font-face { font-family: 'خط 128'; src: url('fonts/font_0128.ttf'); font-display: swap; }
+@font-face { font-family: 'font_0128'; src: url('fonts/font_0128.ttf'); font-display: swap; }
+@font-face { font-family: 'خط 129'; src: url('fonts/font_0129.ttf'); font-display: swap; }
+@font-face { font-family: 'font_0129'; src: url('fonts/font_0129.ttf'); font-display: swap; }
+@font-face { font-family: 'خط 130'; src: url('fonts/font_0130.ttf'); font-display: swap; }
+@font-face { font-family: 'font_0130'; src: url('fonts/font_0130.ttf'); font-display: swap; }
+@font-face { font-family: 'خط 131'; src: url('fonts/font_0131.ttf'); font-display: swap; }
+@font-face { font-family: 'font_0131'; src: url('fonts/font_0131.ttf'); font-display: swap; }
+@font-face { font-family: 'خط 132'; src: url('fonts/font_0132.ttf'); font-display: swap; }
+@font-face { font-family: 'font_0132'; src: url('fonts/font_0132.ttf'); font-display: swap; }
+@font-face { font-family: 'خط 133'; src: url('fonts/font_0133.ttf'); font-display: swap; }
+@font-face { font-family: 'font_0133'; src: url('fonts/font_0133.ttf'); font-display: swap; }
+@font-face { font-family: 'خط 134'; src: url('fonts/font_0134.ttf'); font-display: swap; }
+@font-face { font-family: 'font_0134'; src: url('fonts/font_0134.ttf'); font-display: swap; }
+@font-face { font-family: 'خط 135'; src: url('fonts/font_0135.ttf'); font-display: swap; }
+@font-face { font-family: 'font_0135'; src: url('fonts/font_0135.ttf'); font-display: swap; }
+@font-face { font-family: 'خط 136'; src: url('fonts/font_0136.ttf'); font-display: swap; }
+@font-face { font-family: 'font_0136'; src: url('fonts/font_0136.ttf'); font-display: swap; }
+@font-face { font-family: 'خط 137'; src: url('fonts/font_0137.ttf'); font-display: swap; }
+@font-face { font-family: 'font_0137'; src: url('fonts/font_0137.ttf'); font-display: swap; }
+@font-face { font-family: 'خط 138'; src: url('fonts/font_0138.ttf'); font-display: swap; }
+@font-face { font-family: 'font_0138'; src: url('fonts/font_0138.ttf'); font-display: swap; }
+@font-face { font-family: 'خط 139'; src: url('fonts/font_0139.ttf'); font-display: swap; }
+@font-face { font-family: 'font_0139'; src: url('fonts/font_0139.ttf'); font-display: swap; }
+@font-face { font-family: 'خط 140'; src: url('fonts/font_0140.ttf'); font-display: swap; }
+@font-face { font-family: 'font_0140'; src: url('fonts/font_0140.ttf'); font-display: swap; }
+@font-face { font-family: 'خط 141'; src: url('fonts/font_0141.ttf'); font-display: swap; }
+@font-face { font-family: 'font_0141'; src: url('fonts/font_0141.ttf'); font-display: swap; }
+@font-face { font-family: 'خط 142'; src: url('fonts/font_0142.ttf'); font-display: swap; }
+@font-face { font-family: 'font_0142'; src: url('fonts/font_0142.ttf'); font-display: swap; }
+@font-face { font-family: 'خط 143'; src: url('fonts/font_0143.ttf'); font-display: swap; }
+@font-face { font-family: 'font_0143'; src: url('fonts/font_0143.ttf'); font-display: swap; }
+@font-face { font-family: 'خط 144'; src: url('fonts/font_0144.ttf'); font-display: swap; }
+@font-face { font-family: 'font_0144'; src: url('fonts/font_0144.ttf'); font-display: swap; }
+@font-face { font-family: 'خط 145'; src: url('fonts/font_0145.ttf'); font-display: swap; }
+@font-face { font-family: 'font_0145'; src: url('fonts/font_0145.ttf'); font-display: swap; }
+@font-face { font-family: 'خط 146'; src: url('fonts/font_0146.ttf'); font-display: swap; }
+@font-face { font-family: 'font_0146'; src: url('fonts/font_0146.ttf'); font-display: swap; }
+@font-face { font-family: 'خط 147'; src: url('fonts/font_0147.ttf'); font-display: swap; }
+@font-face { font-family: 'font_0147'; src: url('fonts/font_0147.ttf'); font-display: swap; }
+@font-face { font-family: 'خط 148'; src: url('fonts/font_0148.ttf'); font-display: swap; }
+@font-face { font-family: 'font_0148'; src: url('fonts/font_0148.ttf'); font-display: swap; }
+@font-face { font-family: 'خط 149'; src: url('fonts/font_0149.ttf'); font-display: swap; }
+@font-face { font-family: 'font_0149'; src: url('fonts/font_0149.ttf'); font-display: swap; }
+@font-face { font-family: 'خط 150'; src: url('fonts/font_0150.ttf'); font-display: swap; }
+@font-face { font-family: 'font_0150'; src: url('fonts/font_0150.ttf'); font-display: swap; }
+@font-face { font-family: 'خط 151'; src: url('fonts/font_0151.ttf'); font-display: swap; }
+@font-face { font-family: 'font_0151'; src: url('fonts/font_0151.ttf'); font-display: swap; }
+@font-face { font-family: 'خط 152'; src: url('fonts/font_0152.ttf'); font-display: swap; }
+@font-face { font-family: 'font_0152'; src: url('fonts/font_0152.ttf'); font-display: swap; }
+@font-face { font-family: 'خط 153'; src: url('fonts/font_0153.ttf'); font-display: swap; }
+@font-face { font-family: 'font_0153'; src: url('fonts/font_0153.ttf'); font-display: swap; }
+@font-face { font-family: 'خط 154'; src: url('fonts/font_0154.ttf'); font-display: swap; }
+@font-face { font-family: 'font_0154'; src: url('fonts/font_0154.ttf'); font-display: swap; }
+@font-face { font-family: 'خط 155'; src: url('fonts/font_0155.ttf'); font-display: swap; }
+@font-face { font-family: 'font_0155'; src: url('fonts/font_0155.ttf'); font-display: swap; }
+@font-face { font-family: 'خط 156'; src: url('fonts/font_0156.ttf'); font-display: swap; }
+@font-face { font-family: 'font_0156'; src: url('fonts/font_0156.ttf'); font-display: swap; }
+@font-face { font-family: 'خط 157'; src: url('fonts/font_0157.ttf'); font-display: swap; }
+@font-face { font-family: 'font_0157'; src: url('fonts/font_0157.ttf'); font-display: swap; }
+@font-face { font-family: 'خط 158'; src: url('fonts/font_0158.ttf'); font-display: swap; }
+@font-face { font-family: 'font_0158'; src: url('fonts/font_0158.ttf'); font-display: swap; }
+@font-face { font-family: 'خط 159'; src: url('fonts/font_0159.ttf'); font-display: swap; }
+@font-face { font-family: 'font_0159'; src: url('fonts/font_0159.ttf'); font-display: swap; }
+@font-face { font-family: 'خط 160'; src: url('fonts/font_0160.ttf'); font-display: swap; }
+@font-face { font-family: 'font_0160'; src: url('fonts/font_0160.ttf'); font-display: swap; }
+@font-face { font-family: 'خط 161'; src: url('fonts/font_0161.ttf'); font-display: swap; }
+@font-face { font-family: 'font_0161'; src: url('fonts/font_0161.ttf'); font-display: swap; }
+@font-face { font-family: 'خط 162'; src: url('fonts/font_0162.ttf'); font-display: swap; }
+@font-face { font-family: 'font_0162'; src: url('fonts/font_0162.ttf'); font-display: swap; }
+@font-face { font-family: 'خط 163'; src: url('fonts/font_0163.ttf'); font-display: swap; }
+@font-face { font-family: 'font_0163'; src: url('fonts/font_0163.ttf'); font-display: swap; }
+@font-face { font-family: 'خط 164'; src: url('fonts/font_0164.ttf'); font-display: swap; }
+@font-face { font-family: 'font_0164'; src: url('fonts/font_0164.ttf'); font-display: swap; }
+@font-face { font-family: 'خط 165'; src: url('fonts/font_0165.ttf'); font-display: swap; }
+@font-face { font-family: 'font_0165'; src: url('fonts/font_0165.ttf'); font-display: swap; }
+@font-face { font-family: 'خط 166'; src: url('fonts/font_0166.ttf'); font-display: swap; }
+@font-face { font-family: 'font_0166'; src: url('fonts/font_0166.ttf'); font-display: swap; }
+@font-face { font-family: 'خط 167'; src: url('fonts/font_0167.ttf'); font-display: swap; }
+@font-face { font-family: 'font_0167'; src: url('fonts/font_0167.ttf'); font-display: swap; }
+@font-face { font-family: 'خط 168'; src: url('fonts/font_0168.ttf'); font-display: swap; }
+@font-face { font-family: 'font_0168'; src: url('fonts/font_0168.ttf'); font-display: swap; }
+@font-face { font-family: 'خط 169'; src: url('fonts/font_0169.ttf'); font-display: swap; }
+@font-face { font-family: 'font_0169'; src: url('fonts/font_0169.ttf'); font-display: swap; }
+@font-face { font-family: 'خط 170'; src: url('fonts/font_0170.ttf'); font-display: swap; }
+@font-face { font-family: 'font_0170'; src: url('fonts/font_0170.ttf'); font-display: swap; }
+@font-face { font-family: 'خط 171'; src: url('fonts/font_0171.ttf'); font-display: swap; }
+@font-face { font-family: 'font_0171'; src: url('fonts/font_0171.ttf'); font-display: swap; }
+@font-face { font-family: 'خط 172'; src: url('fonts/font_0172.ttf'); font-display: swap; }
+@font-face { font-family: 'font_0172'; src: url('fonts/font_0172.ttf'); font-display: swap; }
+@font-face { font-family: 'خط 173'; src: url('fonts/font_0173.ttf'); font-display: swap; }
+@font-face { font-family: 'font_0173'; src: url('fonts/font_0173.ttf'); font-display: swap; }
+@font-face { font-family: 'خط 174'; src: url('fonts/font_0174.ttf'); font-display: swap; }
+@font-face { font-family: 'font_0174'; src: url('fonts/font_0174.ttf'); font-display: swap; }
+@font-face { font-family: 'خط 175'; src: url('fonts/font_0175.otf'); font-display: swap; }
+@font-face { font-family: 'font_0175'; src: url('fonts/font_0175.otf'); font-display: swap; }
+@font-face { font-family: 'خط 176'; src: url('fonts/font_0176.otf'); font-display: swap; }
+@font-face { font-family: 'font_0176'; src: url('fonts/font_0176.otf'); font-display: swap; }
+@font-face { font-family: 'خط 177'; src: url('fonts/font_0177.otf'); font-display: swap; }
+@font-face { font-family: 'font_0177'; src: url('fonts/font_0177.otf'); font-display: swap; }
