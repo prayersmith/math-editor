@@ -1,7 +1,7 @@
 // Offline support. Change VERSION whenever the files are updated.
-const VERSION='v31';
+const VERSION='v32';
 const CACHE='arabic-eq-'+VERSION;
-const ASSETS=["./", "index.html", "fonts.css", "manifest.webmanifest", "icon-192.png", "icon-512.png", "apple-touch-icon.png", "fonts/amiri-arabic-400-italic.woff2", "fonts/amiri-arabic-400-normal.woff2", "fonts/amiri-latin-400-italic.woff2", "fonts/amiri-latin-400-normal.woff2", "fonts/amiri-latin-ext-400-italic.woff2", "fonts/amiri-latin-ext-400-normal.woff2", "fonts/aref-ruqaa-arabic-700-normal.woff2", "fonts/aref-ruqaa-latin-700-normal.woff2", "fonts/aref-ruqaa-latin-ext-700-normal.woff2", "fonts/ibm-plex-sans-arabic-arabic-400-normal.woff2", "fonts/ibm-plex-sans-arabic-arabic-500-normal.woff2", "fonts/ibm-plex-sans-arabic-arabic-600-normal.woff2", "fonts/ibm-plex-sans-arabic-cyrillic-ext-400-normal.woff2", "fonts/ibm-plex-sans-arabic-cyrillic-ext-500-normal.woff2", "fonts/ibm-plex-sans-arabic-cyrillic-ext-600-normal.woff2", "fonts/ibm-plex-sans-arabic-latin-400-normal.woff2", "fonts/ibm-plex-sans-arabic-latin-500-normal.woff2", "fonts/ibm-plex-sans-arabic-latin-600-normal.woff2", "fonts/ibm-plex-sans-arabic-latin-ext-400-normal.woff2", "fonts/ibm-plex-sans-arabic-latin-ext-500-normal.woff2", "fonts/ibm-plex-sans-arabic-latin-ext-600-normal.woff2", "fonts/noto-sans-math-latin-400-normal.woff2"];
+const ASSETS=["./", "index.html", "fonts.css", "manifest.webmanifest", "icon-192.png", "icon-512.png", "apple-touch-icon.png", "fonts/amiri-arabic-400-italic.woff2", "fonts/amiri-arabic-400-normal.woff2", "fonts/amiri-latin-400-italic.woff2", "fonts/amiri-latin-400-normal.woff2", "fonts/amiri-latin-ext-400-italic.woff2", "fonts/amiri-latin-ext-400-normal.woff2", "fonts/aref-ruqaa-arabic-700-normal.woff2", "fonts/aref-ruqaa-latin-700-normal.woff2", "fonts/aref-ruqaa-latin-ext-700-normal.woff2", "fonts/ibm-plex-sans-arabic-arabic-400-normal.woff2", "fonts/ibm-plex-sans-arabic-arabic-500-normal.woff2", "fonts/ibm-plex-sans-arabic-arabic-600-normal.woff2", "fonts/ibm-plex-sans-arabic-cyrillic-ext-400-normal.woff2", "fonts/ibm-plex-sans-arabic-cyrillic-ext-500-normal.woff2", "fonts/ibm-plex-sans-arabic-cyrillic-ext-600-normal.woff2", "fonts/ibm-plex-sans-arabic-latin-400-normal.woff2", "fonts/ibm-plex-sans-arabic-latin-500-normal.woff2", "fonts/ibm-plex-sans-arabic-latin-600-normal.woff2", "fonts/ibm-plex-sans-arabic-latin-ext-400-normal.woff2", "fonts/ibm-plex-sans-arabic-latin-ext-500-normal.woff2", "fonts/ibm-plex-sans-arabic-latin-ext-600-normal.woff2", "fonts/noto-sans-math-latin-400-normal.woff2", "icon-maskable-512.png", "pdfjs/pdf.min.js", "pdfjs/pdf.worker.min.js"];
 self.addEventListener('install',e=>{ e.waitUntil(caches.open(CACHE).then(c=>c.addAll(ASSETS)).then(()=>self.skipWaiting())); });
 self.addEventListener('activate',e=>{ e.waitUntil(caches.keys().then(ks=>Promise.all(ks.filter(k=>k!==CACHE).map(k=>caches.delete(k)))).then(()=>self.clients.claim())); });
 self.addEventListener('fetch',e=>{
@@ -12,5 +12,9 @@ self.addEventListener('fetch',e=>{
     e.respondWith(fetch(req).then(r=>{ const copy=r.clone(); caches.open(CACHE).then(c=>c.put('index.html',copy)); return r; }).catch(()=>caches.match('index.html')));
     return;
   }
-  e.respondWith(caches.match(req,{ignoreSearch:true}).then(hit=>hit||fetch(req)));
+  // Saved copy first; anything fetched once (e.g. the extra fonts in mfonts/) is kept so it also works offline later.
+  e.respondWith(caches.match(req,{ignoreSearch:true}).then(hit=>hit||fetch(req).then(r=>{
+    if(r&&r.ok&&r.type==='basic'){ const copy=r.clone(); caches.open(CACHE).then(c=>c.put(req,copy)); }
+    return r;
+  })));
 });
