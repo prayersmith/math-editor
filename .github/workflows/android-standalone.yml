@@ -55,12 +55,19 @@ jobs:
         working-directory: build/android
         run: ./gradlew assembleRelease --no-daemon --stacktrace
       - name: Sign
+        env:
+          KS_B64: ${{ secrets.ANDROID_KS_B64 }}
+          KS_PASS: ${{ secrets.ANDROID_KS_PASS }}
         run: |
           BT=$(ls -d $ANDROID_HOME/build-tools/* | sort -V | tail -1)
-          keytool -genkeypair -keystore $RUNNER_TEMP/r.jks -storepass "ame-$GITHUB_RUN_ID" -keypass "ame-$GITHUB_RUN_ID" -alias ame -keyalg RSA -keysize 2048 -validity 10000 -dname "CN=Arabic Math Editor"
+          if [ -n "$KS_B64" ]; then
+            echo "$KS_B64" | base64 -d > $RUNNER_TEMP/r.jks; PW="$KS_PASS"; echo "fixed signing key"
+          else
+            PW="ame-$GITHUB_RUN_ID"; keytool -genkeypair -keystore $RUNNER_TEMP/r.jks -storepass "$PW" -keypass "$PW" -alias ame -keyalg RSA -keysize 2048 -validity 10000 -dname "CN=Arabic Math Editor"
+          fi
           U=$(ls build/android/app/build/outputs/apk/release/*.apk | head -1)
           $BT/zipalign -f -p 4 "$U" aligned.apk
-          $BT/apksigner sign --ks $RUNNER_TEMP/r.jks --ks-pass "pass:ame-$GITHUB_RUN_ID" --key-pass "pass:ame-$GITHUB_RUN_ID" --out ArabicMathEditor-App.apk aligned.apk
+          $BT/apksigner sign --ks $RUNNER_TEMP/r.jks --ks-pass "pass:$PW" --key-pass "pass:$PW" --out ArabicMathEditor-App.apk aligned.apk
           $BT/apksigner verify ArabicMathEditor-App.apk && ls -la ArabicMathEditor-App.apk
       - name: Attach to release
         env:
