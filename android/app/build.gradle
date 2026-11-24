@@ -1,0 +1,23 @@
+plugins { id 'com.android.application' }
+android {
+    namespace 'io.github.prayersmith.arabicmath'
+    compileSdk 34
+    defaultConfig {
+        applicationId 'io.github.prayersmith.arabicmath'
+        minSdk 21
+        targetSdk 34
+        versionCode 1
+        versionName '1.0'
+    }
+    signingConfigs {
+        release {
+            storeFile file(System.getenv('KS_FILE') ?: 'release.jks')
+            storePassword System.getenv('KS_PASS') ?: 'changeit'
+            keyAlias 'ame'
+            keyPassword System.getenv('KS_PASS') ?: 'changeit'
+        }
+    }
+    buildTypes { release { signingConfig signingConfigs.release; minifyEnabled false } }
+    compileOptions { sourceCompatibility JavaVersion.VERSION_17; targetCompatibility JavaVersion.VERSION_17 }
+}
+dependencies { implementation 'com.google.androidbrowserhelper:androidbrowserhelper:2.5.0' }
