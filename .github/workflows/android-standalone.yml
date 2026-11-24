@@ -41,6 +41,7 @@ jobs:
           JSON
           npx cap add android
           npx cap sync android
+          sudo apt-get install -y -qq imagemagick >/dev/null
           # launcher icon from the editor's own icon
           R=android/app/src/main/res
           rm -rf $R/mipmap-anydpi-v26 $R/drawable-v24/ic_launcher_foreground.xml
