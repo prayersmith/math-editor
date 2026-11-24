@@ -1,0 +1,69 @@
+name: Build standalone Android app
+on:
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: "Release tag to attach the APK to"
+        required: true
+        default: "android-app-v1"
+permissions:
+  contents: write
+jobs:
+  apk:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: '20' }
+      - uses: actions/setup-java@v4
+        with: { distribution: temurin, java-version: '17' }
+      - name: Web files
+        run: |
+          mkdir -p build/www && cd build
+          cp ../desktop/index.html www/index.html
+          cp -r ../fonts ../mfonts ../pdfjs ../ocr www/
+          cp ../fonts.css ../custom-fonts.css ../icon-192.png ../icon-512.png www/
+          cp ../android-standalone/cap-shim.js www/cap-shim.js
+          # the shim must run before the editor
+          python3 - <<'PY'
+          p='www/index.html'; s=open(p,encoding='utf-8').read()
+          i=s.index('<head>')+6; s=s[:i]+'<script src="cap-shim.js"></script>'+s[i:]
+          open(p,'w',encoding='utf-8').write(s)
+          PY
+          du -sh www
+      - name: Capacitor project
+        working-directory: build
+        run: |
+          npm init -y >/dev/null
+          npm i @capacitor/core@6 @capacitor/cli@6 @capacitor/android@6 @capacitor/filesystem@6 @capacitor/share@6
+          cat > capacitor.config.json <<'JSON'
+          {"appId":"io.github.prayersmith.arabicmath.app","appName":"محرر المعادلات العربي","webDir":"www","server":{"androidScheme":"https"},"android":{"allowMixedContent":false}}
+          JSON
+          npx cap add android
+          npx cap sync android
+          # launcher icon from the editor's own icon
+          R=android/app/src/main/res
+          rm -rf $R/mipmap-anydpi-v26 $R/drawable-v24/ic_launcher_foreground.xml
+          for d in mdpi:48 hdpi:72 xhdpi:96 xxhdpi:144 xxxhdpi:192; do
+            n=${d%%:*}; s=${d##*:}; mkdir -p $R/mipmap-$n
+            convert www/icon-512.png -resize ${s}x${s} $R/mipmap-$n/ic_launcher.png
+            cp $R/mipmap-$n/ic_launcher.png $R/mipmap-$n/ic_launcher_round.png
+            rm -f $R/mipmap-$n/ic_launcher_foreground.png
+          done
+      - name: Build
+        working-directory: build/android
+        run: ./gradlew assembleRelease --no-daemon --stacktrace
+      - name: Sign
+        run: |
+          BT=$(ls -d $ANDROID_HOME/build-tools/* | sort -V | tail -1)
+          keytool -genkeypair -keystore $RUNNER_TEMP/r.jks -storepass "ame-$GITHUB_RUN_ID" -keypass "ame-$GITHUB_RUN_ID" -alias ame -keyalg RSA -keysize 2048 -validity 10000 -dname "CN=Arabic Math Editor"
+          U=$(ls build/android/app/build/outputs/apk/release/*.apk | head -1)
+          $BT/zipalign -f -p 4 "$U" aligned.apk
+          $BT/apksigner sign --ks $RUNNER_TEMP/r.jks --ks-pass "pass:ame-$GITHUB_RUN_ID" --key-pass "pass:ame-$GITHUB_RUN_ID" --out ArabicMathEditor-App.apk aligned.apk
+          $BT/apksigner verify ArabicMathEditor-App.apk && ls -la ArabicMathEditor-App.apk
+      - name: Attach to release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release view "${{ inputs.tag }}" >/dev/null 2>&1 || gh release create "${{ inputs.tag }}" --title "Android app ${{ inputs.tag }}" --notes "Standalone Android app (works offline)" --prerelease --latest=false
+          gh release upload "${{ inputs.tag }}" ArabicMathEditor-App.apk --clobber
