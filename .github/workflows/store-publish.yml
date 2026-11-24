@@ -1,0 +1,45 @@
+# Publishes the Store package (MSIX) to Microsoft Store automatically
+# when a GitHub release that carries a *.msix asset is published.
+name: Publish to Microsoft Store
+
+on:
+  release:
+    types: [published]
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: "Release tag that holds the .msix (e.g. v1.6.0)"
+        required: true
+
+jobs:
+  store:
+    runs-on: windows-latest
+    steps:
+      - name: Download the .msix from the release
+        shell: pwsh
+        env:
+          GH_TOKEN: ${{ github.token }}
+          TAG: ${{ github.event.release.tag_name || inputs.tag }}
+        run: |
+          New-Item -ItemType Directory -Force release | Out-Null
+          gh release download $env:TAG --repo ${{ github.repository }} --pattern "*.msix" --dir release --clobber
+          $f = Get-ChildItem release -Filter *.msix | Select-Object -First 1
+          if (-not $f) { Write-Host "No .msix asset in this release - nothing to publish."; exit 0 }
+          Rename-Item $f.FullName "package.msix" -Force
+          "HAS_MSIX=1" | Out-File -Append -Encoding utf8 $env:GITHUB_ENV
+
+      - name: Configure Microsoft Store CLI
+        if: env.HAS_MSIX == '1'
+        uses: microsoft/microsoft-store-apppublisher@v1.1
+
+      - name: Reconfigure store credentials
+        if: env.HAS_MSIX == '1'
+        run: msstore reconfigure `
+              --tenantId ${{ secrets.AZURE_AD_TENANT_ID }} `
+              --sellerId ${{ secrets.SELLER_ID }} `
+              --clientId ${{ secrets.AZURE_AD_APPLICATION_CLIENT_ID }} `
+              --clientSecret ${{ secrets.AZURE_AD_APPLICATION_SECRET }}
+
+      - name: Publish package
+        if: env.HAS_MSIX == '1'
+        run: msstore publish '${{ github.workspace }}/release/package.msix' -id ${{ vars.STORE_PRODUCT_ID }}
