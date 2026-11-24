@@ -31,5 +31,5 @@ jobs:
           GH_TOKEN: ${{ github.token }}
         run: |
           cp android/app/build/outputs/apk/release/app-release.apk ArabicMathEditor.apk
-          gh release view "${{ inputs.tag }}" >/dev/null 2>&1 || gh release create "${{ inputs.tag }}" --title "Android ${{ inputs.tag }}" --notes "Arabic Math Editor for Android (installs the web app full screen)"
+          gh release view "${{ inputs.tag }}" >/dev/null 2>&1 || gh release create "${{ inputs.tag }}" --title "Android ${{ inputs.tag }}" --notes "Arabic Math Editor for Android (installs the web app full screen)" --prerelease --latest=false
           gh release upload "${{ inputs.tag }}" ArabicMathEditor.apk --clobber
