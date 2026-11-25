@@ -74,4 +74,6 @@ jobs:
           GH_TOKEN: ${{ github.token }}
         run: |
           gh release view "${{ inputs.tag }}" >/dev/null 2>&1 || gh release create "${{ inputs.tag }}" --title "Android app ${{ inputs.tag }}" --notes "Standalone Android app (works offline)" --prerelease --latest=false
+          gh release delete-asset "${{ inputs.tag }}" ArabicMathEditor-App.apk --yes || true
+          sleep 3
           gh release upload "${{ inputs.tag }}" ArabicMathEditor-App.apk --clobber
