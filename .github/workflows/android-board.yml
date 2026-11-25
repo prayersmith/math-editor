@@ -25,14 +25,20 @@ jobs:
           cp ../fonts.css ../custom-fonts.css ../icon-192.png ../icon-512.png ../icon-maskable-512.png www/
           cp ../board/index.html ../board/icon-192.png ../board/icon-512.png www/board/
           cp ../android-standalone/cap-shim.js www/cap-shim.js
+          cp ../android-standalone/board-upd.js www/upd.js
+          cp ../android-standalone/board-upd-check.js www/upd-check.js
           python3 - <<'PY'
+          import hashlib, json
+          # fingerprints of the copies built into the app, so the updater only downloads real changes
+          json.dump({'board': hashlib.sha256(open('../board/index.html','rb').read()).hexdigest(),
+                     'editor': hashlib.sha256(open('../index.html','rb').read()).hexdigest()}, open('www/upd-base.json','w'))
           # editor: open the board on launch; the editor itself is used inside the board
           p='www/index.html'; s=open(p,encoding='utf-8').read()
-          boot='<script>if(window===top&&!/[?&]board=/.test(location.search)&&!sessionStorage.getItem("boardBoot")){sessionStorage.setItem("boardBoot","1");location.replace("board/index.html");}</script><script src="cap-shim.js"></script>'
+          boot='<script>if(window===top&&!/[?&]board=/.test(location.search)&&!sessionStorage.getItem("boardBoot")){sessionStorage.setItem("boardBoot","1");window.__booting=1;location.replace("board/index.html");}</script><script src="upd.js"></script><script src="cap-shim.js"></script>'
           i=s.index('<head>')+6; s=s[:i]+boot+s[i:]
           open(p,'w',encoding='utf-8').write(s)
           p='www/board/index.html'; s=open(p,encoding='utf-8').read()
-          i=s.index('<head>')+6; s=s[:i]+'<script src="../cap-shim.js"></script>'+s[i:]
+          i=s.index('<head>')+6; s=s[:i]+'<script src="../upd.js"></script><script src="../cap-shim.js"></script>'+s[i:]
           open(p,'w',encoding='utf-8').write(s)
           PY
           du -sh www
