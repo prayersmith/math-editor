@@ -1,0 +1,1 @@
+console.log('lines',await pg.evaluate(()=>{try{return JSON.parse(document.querySelector(',await pg.isVisible('#wsEqDist'),await pg.isVisible('#wsEqLine'));
