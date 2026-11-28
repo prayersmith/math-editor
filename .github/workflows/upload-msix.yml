@@ -1,0 +1,21 @@
+name: Upload msix to release
+on:
+  workflow_dispatch:
+    inputs:
+      tag:
+        required: true
+permissions:
+  contents: write
+jobs:
+  up:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: msix-upload
+      - run: |
+          cat parts/p* > ArabicMathEditor-Store-1.6.0.msix
+          ls -la ArabicMathEditor-Store-1.6.0.msix
+          gh release upload "${{ inputs.tag }}" ArabicMathEditor-Store-1.6.0.msix --clobber --repo "${{ github.repository }}"
+        env:
+          GH_TOKEN: ${{ github.token }}
